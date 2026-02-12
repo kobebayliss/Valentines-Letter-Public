@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valentines Letter
 
-## Getting Started
+This is an interactive React love letter website with dialogue, a personalisable quiz, a personalisable letter, and a clean frontend with smooth animation.
 
-First, run the development server:
+## Features
 
+- Clean frontend design – Tailwind used to create seamless animation and transitions between states
+- Personalisable quiz – Add as many customised questions with their answers as you like as a prerequisite to open the letter
+- Personalisable letter – Write a custom message on the card of any length for the recipient to read
+
+<br>**Motivation**<br>
+Built to turn a simple letter into an experience for someone.
+
+**Technology**<br>
+Frontend made with React and Tailwind. Development testing with Next.js.
+
+## Future Plans
+- More stages for letter (mini games, my favourite pictures, etc.)
+- Move quiz questions and answers to Next.js server so inspecting bundle will not reveal answers<br>
+
+## Installation and Setup
 ```bash
+# Clone repository
+git clone https://github.com/kobebayliss/Valentines-Letter-Public.git
+cd Valentines-Letter-Public
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+# Create .env file
+# 'index' represents order in which dialogues/questions will be displayed
+# Dialogues show for 5 seconds, and questions show until answered
+# Insert these into .env:
+# DIALOGUES=[{"index": 1, "dialogue": "DIALOGUE HERE"}, {"index": 2, "dialogue": "DIALOGUE HERE"}]
+# QUESTIONS=[{"index": 3, "question": "QUESTION HERE", "answer": "ANSWER HERE"}]
+# HEADER="HEADER FOR CARD (eg. To the love of my life,)"
+# PARTNER_FIRST_NAME="RECIPIENT FIRST NAME"
+# PARTNER_LAST_NAME="RECIPIENT LAST NAME"
+# YOUR_FIRST_NAME="YOUR FIRST NAME"
+# LETTER_CONTENT="WRITE LETTER HERE (use \n only for newline)"
+
+# Insert three photos into the public folder: "cover_photo.png" (front cover of letter), "card_photo1.png", "card_photo2.png"
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# For a live website, you must insert the above env vars into the respective fields on your host of choice's settings (Vercel makes this very simple)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Legal and Contact
+This Valentines Letter website is open-source. All personal data provided by users is stored locally and inaccessible. No personal data is shared outside of the website without explicit user consent.
+<br><br>Contact: kobebayliss1@gmail.com
